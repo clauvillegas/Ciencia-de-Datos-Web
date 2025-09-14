@@ -1,75 +1,56 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mi página en GitHub Pages</title>
-
-  <!-- SEO básico -->
-  <meta name="description" content="Sitio estático simple desplegado con GitHub Pages.">
-  <link rel="icon" href="./assets/favicon.ico">
-
-  <!-- Social (Open Graph / Twitter) -->
-  <meta property="og:title" content="Mi página en GitHub Pages">
-  <meta property="og:description" content="Sitio estático simple desplegado con GitHub Pages.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="./assets/og-image.png">
-  <meta name="twitter:card" content="summary_large_image">
-
-  <!-- Estilos -->
-  <link rel="stylesheet" href="./styles.css">
-  <style>
-    /* Puedes borrar esto si usas styles.css */
-    :root { color-scheme: light dark; }
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 0; }
-    main { max-width: 70ch; margin: 6rem auto; padding: 0 1rem; }
-    h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: .5rem; }
-    p { line-height: 1.6; }
-    a.button { display:inline-block; padding:.7rem 1rem; border-radius:.6rem; text-decoration:none; border:1px solid currentColor; }
-    footer { margin: 4rem 0 2rem; font-size: .9rem; opacity: .7; }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portafolio · Python</title>
+  <meta name="description" content="Portafolio de proyectos y ejercicios en Python." />
+  <link rel="icon" href="./assets/favicon.ico" />
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-  <main>
-    <h1>¡Hola, GitHub Pages! 👋</h1>
-    <p>
-      Esta es una página estática servida desde el repositorio.
-      Edita este archivo <code>index.html</code>, sube un <code>styles.css</code>
-      y coloca tus imágenes en <code>/assets</code>.
-    </p>
+  <div class="container">
+    <header>
+      <div class="brand">🐍 Portafolio Python</div>
+      <nav class="nav">
+        <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </header>
 
-    <nav aria-label="Enlaces útiles">
-      <a class="button" href="https://github.com/">Ver mi GitHub</a>
-      <a class="button" href="./about.html">Acerca de</a>
-    </nav>
-
-    <section>
-      <h2>¿Cómo funciona?</h2>
-      <ol>
-        <li>Coloca este <code>index.html</code> en la carpeta que publiques (raíz o <code>/docs</code>).</li>
-        <li>Habilita GitHub Pages en <em>Settings → Pages</em>.</li>
-        <li>Accede a la URL que te da GitHub.</li>
-      </ol>
+    <section class="hero">
+      <h1>Portafolio · Módulos y ejemplos en Python</h1>
+      <p>Explora los módulos con ejercicios y mini-proyectos. Cada página incluye descripción e implementación con resaltado profesional.</p>
+      <div class="cta">
+        <a class="btn primary" href="#modulos">Ver módulos</a>
+        <a class="btn" href="./about.html">Acerca de</a>
+      </div>
     </section>
 
-    <section aria-labelledby="recursos">
-      <h2 id="recursos">Recursos</h2>
-      <ul>
-        <li>CSS: <code>./styles.css</code> (usa rutas relativas <strong>./</strong> para que funcionen bajo <code>/usuario/repo/</code>)</li>
-        <li>Imagen para redes: <code>./assets/og-image.png</code> (1200×630 recomendado)</li>
-        <li>Icono: <code>./assets/favicon.ico</code></li>
-      </ul>
+    <!-- MÓDULOS -->
+    <section id="modulos" class="grid">
+      <!-- Enlace destacado al módulo Fundamentos de Python -->
+      <a class="card" href="./items/fundamentos.html">
+        <div class="chip">Módulo</div>
+        <h3>Fundamentos de Python</h3>
+        <p>Variables, control de flujo, funciones, POO, EDA, productos, geometría e iteración.</p>
+      </a>
+
+      <!-- Otros módulos/proyectos que ya tenías (opcional) -->
+      <a class="card" href="./items/07-datos.html">
+        <div class="chip">#07</div>
+        <h3>Análisis de datos</h3>
+        <p>pandas, matplotlib y tips.</p>
+      </a>
+      <a class="card" href="./items/08-web.html">
+        <div class="chip">#08</div>
+        <h3>Web y APIs</h3>
+        <p>HTTP, parseo y servicios.</p>
+      </a>
     </section>
 
-    <footer>
-      © <span id="year"></span> Tu Nombre · Hecho con GitHub Pages
-    </footer>
-  </main>
-
-  <script>
-    // Ejemplo mínimo de JS
-    document.getElementById('year').textContent = new Date().getFullYear();
-    console.log('Sitio cargado correctamente.');
-  </script>
+    <footer>© <span id="y"></span> Tu Nombre · Hecho con GitHub Pages</footer>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>

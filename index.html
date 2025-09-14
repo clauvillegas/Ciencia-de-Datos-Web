@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mi página en GitHub Pages</title>
+
+  <!-- SEO básico -->
+  <meta name="description" content="Sitio estático simple desplegado con GitHub Pages.">
+  <link rel="icon" href="./assets/favicon.ico">
+
+  <!-- Social (Open Graph / Twitter) -->
+  <meta property="og:title" content="Mi página en GitHub Pages">
+  <meta property="og:description" content="Sitio estático simple desplegado con GitHub Pages.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="./assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    /* Puedes borrar esto si usas styles.css */
+    :root { color-scheme: light dark; }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 0; }
+    main { max-width: 70ch; margin: 6rem auto; padding: 0 1rem; }
+    h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: .5rem; }
+    p { line-height: 1.6; }
+    a.button { display:inline-block; padding:.7rem 1rem; border-radius:.6rem; text-decoration:none; border:1px solid currentColor; }
+    footer { margin: 4rem 0 2rem; font-size: .9rem; opacity: .7; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>¡Hola, GitHub Pages! 👋</h1>
+    <p>
+      Esta es una página estática servida desde el repositorio.
+      Edita este archivo <code>index.html</code>, sube un <code>styles.css</code>
+      y coloca tus imágenes en <code>/assets</code>.
+    </p>
+
+    <nav aria-label="Enlaces útiles">
+      <a class="button" href="https://github.com/">Ver mi GitHub</a>
+      <a class="button" href="./about.html">Acerca de</a>
+    </nav>
+
+    <section>
+      <h2>¿Cómo funciona?</h2>
+      <ol>
+        <li>Coloca este <code>index.html</code> en la carpeta que publiques (raíz o <code>/docs</code>).</li>
+        <li>Habilita GitHub Pages en <em>Settings → Pages</em>.</li>
+        <li>Accede a la URL que te da GitHub.</li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="recursos">
+      <h2 id="recursos">Recursos</h2>
+      <ul>
+        <li>CSS: <code>./styles.css</code> (usa rutas relativas <strong>./</strong> para que funcionen bajo <code>/usuario/repo/</code>)</li>
+        <li>Imagen para redes: <code>./assets/og-image.png</code> (1200×630 recomendado)</li>
+        <li>Icono: <code>./assets/favicon.ico</code></li>
+      </ul>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Tu Nombre · Hecho con GitHub Pages
+    </footer>
+  </main>
+
+  <script>
+    // Ejemplo mínimo de JS
+    document.getElementById('year').textContent = new Date().getFullYear();
+    console.log('Sitio cargado correctamente.');
+  </script>
+</body>
+</html>
